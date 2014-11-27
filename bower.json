@@ -1,21 +1,6 @@
 {
-  "name": "mariobone-js",
-  "version": "0.0.1-SNAPSHOT",
-  "main": [
-    "dist/css/*",
-    "dist/js/*"
-  ],
-  "ignore": [
-    "/.*",
-    "/css",
-    "/js",
-    "/img",
-    "/templates",
-    "/locales",
-    "*.md",
-    "Gruntfile.js",
-    "package.json"
-  ],
+  "name": "mariobone",
+  "version": "1.0.0",
   "dependencies": {
     "backbone": "1.1.2",
     "bootstrap": "3.2.0",
@@ -27,6 +12,7 @@
     "moment": "2.7.0",
     "requirejs": "2.1.14",
     "require-handlebars-plugin": "0.8.1",
+    "highstock-release": "2.0.3",
     "sinon" : "1.10.3"
   },
   "resolutions": {
