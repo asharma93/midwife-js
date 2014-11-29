@@ -1,17 +1,14 @@
 define(function(require) {
-    var Backbone = require("backbone");
+    var Backbone = require("backbone"),
+        Marionette = require("marionette"),
+        /* jshint unused:false */
+        MarionetteSubRouter = require("marionette.subrouter"),
+        MainController = require("controllers/mainController");
 
-	return Backbone.Router.extend({
-        routes: {
-            "": "index",
+	return Marionette.SubRouter.extend({
+        controller: new MainController(),
+        appRoutes: {
             "home": "onHome"
-        },
-
-        index: function() {
-            console.log("Welcome to your / route.");
-        },
-        onHome: function() {
-            console.log("Welcome to the home route");
         }
     });
 });

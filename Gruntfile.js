@@ -218,7 +218,7 @@
 
                         deps: ["config"],
 
-                        name: "VeyronApp",
+                        name: "ExampleApp",
                         
                         out: "<%= PATHS.BUILD %>js/<%= pkg.name %>.min.js"
                     }

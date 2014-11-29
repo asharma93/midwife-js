@@ -10,7 +10,6 @@
   <!-- Application styles. -->
   <!-- build:[href] /styles.min.css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <script src="bower_components/requirejs/require.js" data-main="js/config"></script>
   <link rel="stylesheet" href="dist/css/mariobone.min.css">
   <script type="text/javascript" src="bower_components/requirejs/require.js"></script>
   <script type="text/javascript" src="dist/js/mariobone.min.js"></script>
@@ -19,7 +18,34 @@
 
 <body>
   <!-- Application container. -->
-    <div class="app-container">
+    <div id="app-container">
+      <script>
+            "use strict";
+            require(["jquery", "backbone", "ExampleApp"], function($, Backbone, App) {
+              Backbone.history.start();
+
+                $(function() {
+                    App.start({
+                      div : "#app-container",
+                      route : "",
+                      routePrefix : "/"
+                    });
+                });
+
+                // Copied from platform-js
+                $("#app-container")
+                    .on("click.appRoute", "a[href]:not([data-noprefix])", function(event) {
+                        var fragment = Backbone.history.getFragment($(this).attr("href")).replace("#", "");
+
+                        event.preventDefault();
+
+                        // Use the application subrouter -- this will add the route prefix
+                        App.Router.navigate(fragment, { trigger: true });
+
+                        return false;
+                    });
+            });
+        </script>
 
     </div>
 
