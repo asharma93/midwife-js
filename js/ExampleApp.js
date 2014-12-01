@@ -1,8 +1,7 @@
-/***************************************************************************
- * COPYRIGHT (C) 2014, Rapid7 LLC, Boston, MA, USA.
- * All rights reserved. This material contains unpublished, copyrighted
- * work including confidential and proprietary information of Rapid7.
- **************************************************************************/
+/************************************************************************
+*   MarioBone - A Backbone.Marionette example application.              *
+*               Boilerplate to get started.                Amit Sharma  *
+************************************************************************/
 
 define(function(require) {
     var $ = require("jquery"),
@@ -77,7 +76,6 @@ define(function(require) {
         $(window).on("resize", setMainPanelHeight);
 
         this.Router = this.Router || new MainRouter();
-        this.Router.navigate("home", {trigger: true});
         Backbone.Wreqr.radio.channel("active").vent.trigger("application:started", this);
     });
     

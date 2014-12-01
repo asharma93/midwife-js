@@ -1,18 +1,21 @@
-/***************************************************************************
- * COPYRIGHT (C) 2014, Rapid7 LLC, Boston, MA, USA.
- * All rights reserved. This material contains unpublished, copyrighted
- * work including confidential and proprietary information of Rapid7.
- **************************************************************************/
+/************************************************************************
+*   MarioBone - A Backbone.Marionette example application.              *
+*               Boilerplate to get started.                Amit Sharma  *
+************************************************************************/
 
 define(function(require) {
     var Marionette = require("marionette"),
         utils = require("objects/eventUtilities"),
         MainView = require("views/mainView");
+
+    function getRegion(name) {
+        return utils.request("getAppRegion", name);
+    }
     
     return Marionette.Controller.extend({
-
+        
         onHome : function() {
-            var workspaceRegion = utils.request("getAppRegion", "workspaceRegion");
+            var workspaceRegion = getRegion("workspaceRegion");
             workspaceRegion.show(new MainView());
         },
     });

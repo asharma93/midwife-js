@@ -1,3 +1,8 @@
+/************************************************************************
+*   MarioBone - A Backbone.Marionette example application.              *
+*               Boilerplate to get started.                Amit Sharma  *
+************************************************************************/
+
 var VENDOR_PATH  = "../bower_components/";
 
 require.config({

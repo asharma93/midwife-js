@@ -1,3 +1,7 @@
+/************************************************************************
+*   MarioBone - A Backbone.Marionette example application.              *
+*               Boilerplate to get started.                Amit Sharma  *
+************************************************************************/
 define(function(require) {
     var MainView,
         Backbone = require("backbone"),

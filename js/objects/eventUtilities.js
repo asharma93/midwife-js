@@ -1,3 +1,8 @@
+/************************************************************************
+*   MarioBone - A Backbone.Marionette example application.              *
+*               Boilerplate to get started.                Amit Sharma  *
+************************************************************************/
+
 define(function(require) {
     var EventUtils,
         /* jshint unused:false */
@@ -34,12 +39,14 @@ define(function(require) {
         clearListenerFor : function(evt, func) {
             return this.getActiveChannel().vent.off(evt, func);
         },
+        //TODO: We should be using the active channel for the request function
+        //      e.g. var func = this.getActiveChannel().reqres.request; 
         //Function to request a region 
         request : function() {
             // arguments passed when function is called. Arguments are assigned to 'args' as an array
             var args = _.toArray(arguments),
-                func = this.getActiveChannel().reqres.request; // assigns the main body of the function to 'func'
-            return func.apply(this.getActiveChannel().reqres, args); //returns the function with apply call
+                func = this.getGlobalChannel().reqres.request; // assigns the main body of the function to 'func'
+            return func.apply(this.getGlobalChannel().reqres, args); //returns the function with apply call
         }
     });
 

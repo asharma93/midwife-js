@@ -7,18 +7,17 @@
 
   <title>MarioBone</title>
 
-  <!-- Application styles. -->
-  <!-- build:[href] /styles.min.css -->
+  <!-- Application styles -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="dist/css/mariobone.min.css">
-  <script type="text/javascript" src="bower_components/requirejs/require.js"></script>
-  <script type="text/javascript" src="dist/js/mariobone.min.js"></script>
   <!-- /build -->
 </head>
 
 <body>
-  <!-- Application container. -->
+  <!-- Application container -->
     <div id="app-container">
+      <script type="text/javascript" src="bower_components/requirejs/require.js"></script>
+      <script type="text/javascript" src="dist/js/mariobone.min.js"></script>
       <script>
             "use strict";
             require(["jquery", "backbone", "ExampleApp"], function($, Backbone, App) {
@@ -28,7 +27,7 @@
                     App.start({
                       div : "#app-container",
                       route : "",
-                      routePrefix : "/"
+                      routePrefix : ""
                     });
                 });
 
@@ -50,8 +49,8 @@
     </div>
 
   <!-- Application source. -->
-  <!-- build:[src] /source.min.js -->
   <script src="bower_components/requirejs/require.js" data-main="js/config"></script>
+  <script type="text/javascript" src="dist/js/mariobone.min.js"></script>
   <!-- /build -->
 </body>
 </html>

@@ -1,3 +1,8 @@
+/************************************************************************
+*   MarioBone - A Backbone.Marionette example application.              *
+*               Boilerplate to get started.                Amit Sharma  *
+************************************************************************/
+
 define(function(require) {
     var Backbone = require("backbone"),
         Marionette = require("marionette"),
@@ -8,7 +13,7 @@ define(function(require) {
 	return Marionette.SubRouter.extend({
         controller: new MainController(),
         appRoutes: {
-            "home": "onHome"
+            "" : "onHome"
         }
     });
 });
