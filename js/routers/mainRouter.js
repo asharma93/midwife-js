@@ -13,7 +13,8 @@ define(function(require) {
 	return Marionette.SubRouter.extend({
         controller: new MainController(),
         appRoutes: {
-            "" : "onHome"
+            "" : "onHome",
+            "home": "onHome"
         }
     });
 });

@@ -75,7 +75,8 @@ define(function(require) {
         setMainPanelHeight();
         $(window).on("resize", setMainPanelHeight);
 
-        this.Router = this.Router || new MainRouter();
+        this.Router = this.Router || new MainRouter(options.routePrefix);
+        this.Router.navigate(options.route || "home", {trigger: true});
         Backbone.Wreqr.radio.channel("active").vent.trigger("application:started", this);
     });
     
