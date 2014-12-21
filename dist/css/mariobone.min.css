@@ -1,1 +1,1 @@
-.app-container{background-color:black;}
+.main-panel{list-style-type:none;padding:0px 10px;position:relative;background-color:white;}.main-panel li{display:inline-block;border-style:solid;border-width:2px;}.main-panel li:first-of-type{display:flex;}#app-switcher-panel{width:15%;height:100%;margin-top:2px;left:0px;}#workspace-panel{position:absolute;margin-top:2px;margin-left:2px;width:84%;height:100%;}

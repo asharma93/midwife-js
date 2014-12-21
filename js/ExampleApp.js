@@ -43,12 +43,16 @@ define(function(require) {
     var footerHeight = $("footer").innerHeight();
     function setMainPanelHeight() {
         var $mainPanel = $("#app-container").find(".main-panel"),
+            mainPanelEl = $mainPanel[0],
+            mainPanelOffsetTop = mainPanelEl.offsetTop,
             viewPortHeight = $(window).height(),
-            panelHeight = viewPortHeight - footerHeight,
+            panelHeight = viewPortHeight - mainPanelOffsetTop - footerHeight,
             minPanelHeight = 600;
-
+        
         $mainPanel.height(panelHeight > minPanelHeight ? panelHeight : minPanelHeight);
+
     }
+
     // end of request handlers Setup
     ExampleApp.on("start", function(options) {
         options = options||{};
@@ -66,9 +70,9 @@ define(function(require) {
 
         $(this.el).html(layoutTemplate());
         this.addRegions({
-            leftPanelRegion : "#left-panel",
+            mainPanelRegion : "#nav-panel",
             workspaceRegion : "#workspace-panel",
-            rightPanelRegion : "#right-panel"
+            appSwitcherPanelRegion : "#app-switcher-panel"
         });
         this.regionsNames = _.keys(this.getRegions());
 

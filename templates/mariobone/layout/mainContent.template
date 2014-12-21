@@ -1,10 +1,13 @@
 <ul class="main-panel">
-  	<li id="left-panel" class="left-panel area">
+
+  	<li id="top-panel" class="top-panel area">
+  		<h1>Top panel </h1> 
+  	</li>
+  	<li id="app-switcher-panel" class="app-switcher-panel"> 
+  		<h1> App swticher panel </h1>
   	</li>
     
   	<li id="workspace-panel" class="workspace-panel area">
-  	</li>
-
-  	<li id="right-panel" class="right-panel area">
+  		Workspace Panel
   	</li>
 </ul>
