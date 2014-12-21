@@ -1,9 +1,25 @@
 <ul class="main-panel">
 
   	<li id="top-panel" class="top-panel area">
-  		<h1>Top panel </h1> 
+  		<div class="logo">
+  			<h1>Top panel </h1> 
+  		</div>	
+  		<ul class="main-nav-items">
+	  		<li class="main-nav-item">
+	  			Home
+	  		</li>
+	  		<li class="main-nav-item">
+	  			Blog
+	  		</li>
+	  		<li class="main-nav-item">
+	  			About
+	  		</li>
+	  		<li class="main-nav-item">
+	  			contact
+	  		</li>
+  		</ul>
   	</li>
-  	<li id="app-switcher-panel" class="app-switcher-panel"> 
+  	<li id="app-switcher-panel" class="app-switcher-panel area"> 
   		<h1> App swticher panel </h1>
   	</li>
     

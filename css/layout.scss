@@ -4,33 +4,45 @@
 
 .main-panel {
 	list-style-type: none;
-	padding: 0px 10px;
-	position: relative;
-	background-color: white
-}
-
-.main-panel li {
-	display: inline-block;
-	border-style: solid;
-	border-width: 2px;
-	
-}
-.main-panel li:first-of-type {
-	display: flex;
 }
 #top-panel {
+	display: flex;
+	height: 15%;
+	border: 2px solid;
+	padding: 0px 10px;
 }
-
 #app-switcher-panel {
+	padding: 0px 10px;
+	display: inline-block;
 	width: 15%;
 	height: 100%; /* Need to re-visit this, if set to 100%, over flows*/
 	margin-top: 2px;
-	left: 0px;
+	border: 2px solid;
+	padding: 0px 10px;
 }
 #workspace-panel {
+	padding: 0px 10px;
+	display: inline-block;
 	position: absolute;
-	margin-top: 2px;
-	margin-left: 2px;
+	margin: 2px 0 0 2px;
 	width: 84%;
 	height: 100%;
+	border: 2px solid;
+	padding: 0px 10px;
 }
+/*Main nav items*/
+.main-nav-items {
+	position: absolute;
+	right: 0px;
+	padding-right: 100px;
+	padding-top: 24px;
+}
+.main-nav-items li {
+	list-style-type: none;
+	display: inline-block;
+	border: 2px solid;
+	margin-left: 25px;
+}
+
+
+
