@@ -3,21 +3,24 @@
 *               Boilerplate to get started.                Amit Sharma  *
 ************************************************************************/
 define(function(require) {
-    var MainView,
+    var MainLayout,
         Backbone = require("backbone"),
+        _ = require("underscore"),
         /* jshint unused:false */
         Marionette = require("marionette"),
-        template = require("hbs!templates/mariobone/layout/mainContent");
+        template = require("hbs!templates/mariobon/layout/mainContent");
 
-    MainView = Backbone.Marionette.ItemView.extend({
+    MainLayout = Backbone.Marionette.LayoutView.extend({
         template : template,
-        events : {
-            "click .main-nav-item" : "onLogin"
-        },
-        onLogin : function() {
-            console.log("You clicked the login tab");
+
+        initialize : function() {
+            this.addRegions({
+                mainPanelRegion : "#nav-panel",
+                workspaceRegion : "#workspace-panel",
+                appSwitcherPanelRegion : "#app-switcher-panel"
+            });
         }
     });
 
-    return MainView;
+    return new MainLayout();
 });

@@ -14,7 +14,8 @@ define(function(require) {
         controller: new MainController(),
         appRoutes: {
             "" : "onHome",
-            "home": "onHome"
+            "home": "onHome",
+            "login": "onLogin"
         }
     });
 });

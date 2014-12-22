@@ -1,29 +1,32 @@
-<ul class="main-panel">
+<ul class="main-layout-panel">
+  <li id="top-panel" class="top-panel area">
+    <div class="logo">
+      <h1>Top panel </h1> 
+    </div>
+  </li>
+  <li id="app-switcher-panel" class="app-switcher-panel area"> 
+    <h1> App swticher panel </h1>
+  </li>
 
-  	<li id="top-panel" class="top-panel area">
-  		<div class="logo">
-  			<h1>Top panel </h1> 
-  		</div>	
-  		<ul class="main-nav-items">
-	  		<li class="main-nav-item">
-	  			Home
-	  		</li>
-	  		<li class="main-nav-item">
-	  			Blog
-	  		</li>
-	  		<li class="main-nav-item">
-	  			About
-	  		</li>
-	  		<li class="main-nav-item">
-	  			contact
-	  		</li>
-  		</ul>
-  	</li>
-  	<li id="app-switcher-panel" class="app-switcher-panel area"> 
-  		<h1> App swticher panel </h1>
-  	</li>
-    
-  	<li id="workspace-panel" class="workspace-panel area">
-  		Workspace Panel
-  	</li>
+  <li id="workspace-panel" class="workspace-panel area">
+    Workspace Panel
+  </li>
 </ul>
+
+<!-- <ul class="main-nav-items">
+        <li class="main-nav-item home">
+          Home
+        </li>
+        <li class="main-nav-item blog">
+          Blog
+        </li>
+        <li class="main-nav-item about">
+          About
+        </li>
+        <li class="main-nav-item contact">
+          contact
+        </li>
+        <li id="login" class="main-nav-item login">
+          login
+        </li>
+</ul> -->

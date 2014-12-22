@@ -13,10 +13,14 @@ define(function(require) {
     }
     
     return Marionette.Controller.extend({
+        onLogin : function() {
+            
+        },
         
         onHome : function() {
-            var workspaceRegion = getRegion("workspaceRegion");
-            workspaceRegion.show(new MainView());
+            var mainContentRegion = getRegion("mainContentRegion");
+            //var userRegion = getRegion("mainContentRegion");
+            mainContentRegion.show(new MainView());
         },
     });
 });

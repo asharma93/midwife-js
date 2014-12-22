@@ -3,21 +3,15 @@
 *               Boilerplate to get started.                Amit Sharma  *
 ************************************************************************/
 define(function(require) {
-    var MainView,
+    var LoginView,
         Backbone = require("backbone"),
         /* jshint unused:false */
         Marionette = require("marionette"),
-        template = require("hbs!templates/mariobone/layout/mainContent");
+        template = require("hbs!templates/mariobone/login/login");
 
-    MainView = Backbone.Marionette.ItemView.extend({
-        template : template,
-        events : {
-            "click .main-nav-item" : "onLogin"
-        },
-        onLogin : function() {
-            console.log("You clicked the login tab");
-        }
+    LoginView = Backbone.Marionette.ItemView.extend({
+        template : template
     });
 
-    return MainView;
+    return LoginView;
 });
