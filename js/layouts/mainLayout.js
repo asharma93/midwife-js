@@ -8,9 +8,10 @@ define(function(require) {
         _ = require("underscore"),
         /* jshint unused:false */
         Marionette = require("marionette"),
-        template = require("hbs!templates/mariobon/layout/mainContent");
+        template = require("hbs!templates/mariobone/layout/mainContent");
 
     MainLayout = Backbone.Marionette.LayoutView.extend({
+        className: "main-content-layout",
         template : template,
 
         initialize : function() {

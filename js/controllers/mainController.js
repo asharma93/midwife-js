@@ -6,7 +6,7 @@
 define(function(require) {
     var Marionette = require("marionette"),
         utils = require("objects/eventUtilities"),
-        MainView = require("views/mainView");
+        MainLayout = require("layouts/mainLayout");
 
     function getRegion(name) {
         return utils.request("getAppRegion", name);
@@ -20,7 +20,7 @@ define(function(require) {
         onHome : function() {
             var mainContentRegion = getRegion("mainContentRegion");
             //var userRegion = getRegion("mainContentRegion");
-            mainContentRegion.show(new MainView());
+            mainContentRegion.show(MainLayout);
         },
     });
 });

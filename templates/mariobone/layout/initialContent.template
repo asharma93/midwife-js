@@ -1,6 +1,6 @@
 <ul class="main-panel">
     <li id="user-panel" class="user-panel area">
-      <h1>User panel </h1>
+      <h2>User panel </h2>
       
     </li>
     <li id="main-content-panel" class="main-content-panel area"> 
