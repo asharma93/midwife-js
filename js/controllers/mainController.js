@@ -6,17 +6,19 @@
 define(function(require) {
     var Marionette = require("marionette"),
         utils = require("objects/eventUtilities"),
-        MainView = require("views/mainView");
+        MainLayout = require("layouts/mainLayout");
 
     function getRegion(name) {
         return utils.request("getAppRegion", name);
     }
     
     return Marionette.Controller.extend({
-        
+        onLogin : function() {
+            //Login logic goes here
+        },
         onHome : function() {
-            var workspaceRegion = getRegion("workspaceRegion");
-            workspaceRegion.show(new MainView());
+            var mainContentRegion = getRegion("mainContentRegion");
+            mainContentRegion.show(MainLayout);
         },
     });
 });

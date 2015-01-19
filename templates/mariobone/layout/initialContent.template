@@ -1,0 +1,9 @@
+<ul class="main-panel">
+    <li id="user-panel" class="user-panel area">
+      <h2>User panel </h2>
+      
+    </li>
+    <li id="main-content-panel" class="main-content-panel area"> 
+      <h1> Main panel </h1>
+    </li>
+</ul>

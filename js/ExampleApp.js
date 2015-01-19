@@ -5,7 +5,7 @@
 
 define(function(require) {
     var $ = require("jquery"),
-        layoutTemplate = require("hbs!templates/mariobone/layout/mainContent"),
+        layoutTemplate = require("hbs!templates/mariobone/layout/initialContent"),
         _ = require("underscore"),
         Backbone = require("backbone"),
         Marionette = require("marionette"),
@@ -70,9 +70,8 @@ define(function(require) {
 
         $(this.el).html(layoutTemplate());
         this.addRegions({
-            mainPanelRegion : "#nav-panel",
-            workspaceRegion : "#workspace-panel",
-            appSwitcherPanelRegion : "#app-switcher-panel"
+            userRegion: "#user-panel",
+            mainContentRegion: "#main-content-panel"
         });
         this.regionsNames = _.keys(this.getRegions());
 

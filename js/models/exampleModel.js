@@ -10,70 +10,70 @@ define(function(require) {
     return Backbone.Model.extend({
         urlRoot : "api/example",
         defaults: function() {
-            var criticalityOffset = _.random(0, 5),
+            var luckOffset = _.random(0, 5),
                 valueOffset = _.random(0, 50);
             return {
                 data: [
-                    //  Fallback data for demo
+                    // Fallback data
                     {
-                        "value":20 + valueOffset,
+                        "value":20,
                         "date":1417392000,
-                        "criticality":1 + criticalityOffset
+                        "luck":1 + luckOffset
                     },
                     {
                         "value":5 + valueOffset,
                         "date":1393632000,
-                        "criticality":1 + criticalityOffset
+                        "luck":1 + luckOffset
                     },
                     {
                         "value":51 + valueOffset,
                         "date":1390498460,
-                        "criticality":2 + criticalityOffset
+                        "luck":2 + luckOffset
                     },
                     {
                         "value":98 + valueOffset,
                         "date":1396310400,
-                        "criticality":3 + criticalityOffset
+                        "luck":3 + luckOffset
                     },
                     {
                         "value":76 + valueOffset,
                         "date":1398902400,
-                        "criticality":3 + criticalityOffset
+                        "luck":3 + luckOffset
                     },
                     {
                         "value":39 + valueOffset,
                         "date":1401580800,
-                        "criticality":2 + criticalityOffset
+                        "luck":2 + luckOffset
                     },
                     {
                         "value":62 + valueOffset,
                         "date":1404172800,
-                        "criticality":3 + criticalityOffset
+                        "luck":3 + luckOffset
                     },
                     {
                         "value":27 + valueOffset,
                         "date":1394006460,
-                        "criticality":2 + criticalityOffset
+                        "luck":2 + luckOffset
                     },
                     {
                         "value":22 + valueOffset,
                         "date":1389539172,
-                        "criticality":2 + criticalityOffset
+                        "luck":2 + luckOffset
                     },
                     {
                         "value":16 + valueOffset,
                         "date":1412121600,
-                        "criticality":1 + criticalityOffset
+                        "luck":1 + luckOffset
                     },
                     {
                         "value":9 + valueOffset,
                         "date":1414800000,
-                        "criticality":1 + criticalityOffset
+                        "luck":1 + luckOffset
                     },
                     {
                         "value":5 + valueOffset,
                         "date":1391212800,
-                        "criticality":1 + criticalityOffset
+                        "luck":1 + luckOffset
                     }
                 ]
             };
