@@ -1,9 +1,10 @@
-**************************
-*  mariobone-starter-kit *
-*			v1.0 		 *
-**************************
 ====================
-Description ========	   
+mariobone-starter-kit
+	v1.0 		 
+====================
+
+====================
+Description   
 ====================
 
 Starter kit for my personal Backbone/Marionette applications
@@ -14,12 +15,12 @@ Remember app.js is your local file path
 development setup. 
 
 An example of Gruntfile.js and package.json has been
-added, prefixed with 'example'. Be sure to remove these once you have set this up correctly.
+added, prefixed with 'example'. Be sure to remove these once you have set them up correctly.
 
 Included a testServer.js file so you can effeciently debug your tests in the browser. Remember to change the configuration slightly (i.e. port number, dirname etc..).
 
 ====================
-Development Tips ===
+Development Tips
 ====================
 
 1) 	Ensure a .gitignore file is in place to prevent
@@ -30,7 +31,7 @@ Development Tips ===
 
 
 ====================
-Testing ============
+Testing
 ====================
 
 1) 	Remember to include a config.js under the test

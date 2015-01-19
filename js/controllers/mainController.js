@@ -14,12 +14,10 @@ define(function(require) {
     
     return Marionette.Controller.extend({
         onLogin : function() {
-            
+            //Login logic goes here
         },
-        
         onHome : function() {
             var mainContentRegion = getRegion("mainContentRegion");
-            //var userRegion = getRegion("mainContentRegion");
             mainContentRegion.show(MainLayout);
         },
     });
