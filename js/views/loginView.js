@@ -12,7 +12,7 @@ define(function(require) {
     return Backbone.Marionette.ItemView.extend({
         template : template,
         ui: {
-            submit: ".login-button",
+            submit: "#submit",
             user: "#login",
             password: "#password"
         },
@@ -21,17 +21,18 @@ define(function(require) {
         },
         authenticate: function(event) {
             event.preventDefault();
-            var url = "hwww.martysmachine.com/api/1/login";
+            var url = "http://10.0.0.102:8080/api/login";
             var formValues = {
-                "user": this.ui.user.val(),
+                "username": this.ui.user.val(),
                 "password": this.ui.password.val()
             };
             console.log("That data: " + formValues);
             $.ajax({
                 url: url,
                 type: "POST",
-                dataType: "json",
-                data: formValues,
+                contentType: "application/json",
+                crossDomain: true,
+                data: JSON.stringify(formValues),
                 success: function(data) {
                     console.log(["Login request details: ", data]);
 

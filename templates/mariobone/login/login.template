@@ -1,17 +1,11 @@
-<form class="login">
-    <p>
-        <label for="login">Email:</label>
-        <input type="text" name="login" id="login" value="name@example.com">
-    </p>
+<div id="login-container">
+<form class="login" action="javascript:void(0);">
+    <fieldset class="clearfix">
+        <p><span class="fontawesome-user"></span><input id="login" type="text" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+        <p><span class="fontawesome-lock"></span><input id="password" type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+        <p><input id="submit" type="submit" value="Sign In"></p>
 
-    <p>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" value="4815162342">
-    </p>
-
-    <p class="login-submit">
-        <button type="submit" class="login-button">Login</button>
-    </p>
-
-    <p class="forgot-password"><a href="index.html">Forgot your password?</a></p>
+    </fieldset>
 </form>
+<p>Not a member? <a href="#">Sign up now</a><span class="fontawesome-arrow-right"></span></p>
+</div>
