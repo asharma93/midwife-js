@@ -71,7 +71,7 @@ define(function(require) {
         $(this.el).html(layoutTemplate());
         this.addRegions({
             userRegion: "#user-panel",
-            mainContentRegion: "#main-content-panel"
+            mainContentRegion: "#main-content"
         });
         this.regionsNames = _.keys(this.getRegions());
 

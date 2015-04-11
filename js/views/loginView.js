@@ -3,15 +3,45 @@
 *               Boilerplate to get started.                Amit Sharma  *
 ************************************************************************/
 define(function(require) {
-    var LoginView,
-        Backbone = require("backbone"),
+    var Backbone = require("backbone"),
         /* jshint unused:false */
+        $ = Backbone.$,
         Marionette = require("marionette"),
         template = require("hbs!templates/mariobone/login/login");
 
-    LoginView = Backbone.Marionette.ItemView.extend({
-        template : template
-    });
+    return Backbone.Marionette.ItemView.extend({
+        template : template,
+        ui: {
+            submit: ".login-button",
+            user: "#login",
+            password: "#password"
+        },
+        events: {
+            "click @ui.submit": "authenticate"
+        },
+        authenticate: function(event) {
+            event.preventDefault();
+            var url = "hwww.martysmachine.com/api/1/login";
+            var formValues = {
+                "user": this.ui.user.val(),
+                "password": this.ui.password.val()
+            };
+            console.log("That data: " + formValues);
+            $.ajax({
+                url: url,
+                type: "POST",
+                dataType: "json",
+                data: formValues,
+                success: function(data) {
+                    console.log(["Login request details: ", data]);
 
-    return LoginView;
+                    if (data.error) {  // If there is an error, show the error messages
+                        $(".alert-error").text(data.error.text).show();
+                    } else { // If not, send them back to the home page
+                        window.location.replace("");
+                    }
+                }
+            });
+        }
+    });
 });

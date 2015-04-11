@@ -1,14 +1,6 @@
-<ul class="main-layout-panel">
-  <li id="nav-panel" class="nav-panel area">
-    <div class="logo">
-      <h1>Top panel </h1> 
-    </div>
-  </li>
-  <li id="app-switcher-panel" class="app-switcher-panel area"> 
-    <h1> App swticher panel </h1>
-  </li>
-
-  <li id="workspace-panel" class="workspace-panel area">
-    Workspace Panel
-  </li>
-</ul>
+<li id="left-panel" class="left-panel area">
+<h1> Side Menu </h1>
+</li>
+<li id="workspace-panel" class="workspace-panel area">
+Workspace Panel
+</li>
