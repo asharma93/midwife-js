@@ -1,11 +1,11 @@
 /************************************************************************
-*   MarioBone - A Backbone.Marionette example application.              *
-*               Boilerplate to get started.                Amit Sharma  *
-************************************************************************/
+ *   MarioBone - A Backbone.Marionette example application.              *
+ *               Boilerplate to get started.                Amit Sharma  *
+ ************************************************************************/
 define(function(require) {
     var Backbone = require("backbone"),
         _ = require("underscore"),
-        /* jshint unused:false */
+    /* jshint unused:false */
         Marionette = require("marionette"),
         template = require("hbs!templates/mariobone/layout/mainContent");
 
@@ -16,9 +16,8 @@ define(function(require) {
 
         initialize : function() {
             this.addRegions({
-                mainPanelRegion : "#nav-panel",
-                workspaceRegion : "#workspace-panel",
-                appSwitcherPanelRegion : "#left-panel"
+                bookingsRegion : ".bookings-region",
+                loginRegion: ".login-region"
             });
         }
     });

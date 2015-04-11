@@ -7,9 +7,14 @@ define(function(require) {
     var $ = require("jquery"),
         layoutTemplate = require("hbs!templates/mariobone/layout/initialContent"),
         _ = require("underscore"),
+        // Controllers
+        MainController = require("controllers/mainController"),
+        BookingsController = require("controllers/bookingsController"),
         Backbone = require("backbone"),
         Marionette = require("marionette"),
+        // Routers
         MainRouter = require("routers/mainRouter"),
+        BookingsRouter = require("routers/bookingsRouter"),
         ExampleApp = new Marionette.Application();
 
     // Setup request handlers
@@ -53,6 +58,14 @@ define(function(require) {
 
     }
 
+    ExampleApp.addInitializer(function() {
+
+        //  Set up the various controllers the app will use
+        this.controllers = this.controllers||{};
+        this.controllers.mainController = new MainController({parent: this});
+        this.controllers.bookingsController = new BookingsController({parent: this});
+    });
+
     // end of request handlers Setup
     ExampleApp.on("start", function(options) {
         options = options||{};
@@ -71,15 +84,23 @@ define(function(require) {
         $(this.el).html(layoutTemplate());
         this.addRegions({
             userRegion: "#user-panel",
-            mainContentRegion: "#main-content"
+            workspaceRegion: "#workspace-panel",
+            leftPanelRegion: "#left-panel"
         });
         this.regionsNames = _.keys(this.getRegions());
 
         setMainPanelHeight();
         $(window).on("resize", setMainPanelHeight);
 
-        this.Router = this.Router || new MainRouter(options.routePrefix);
-        this.Router.navigate(options.route || "home", {trigger: true});
+        this.routers = this.routers || {};
+        this.routers.MainRouter = new MainRouter(options.routePrefix, {
+            controller: this.controllers.mainController
+        });
+        this.routers.bookingsRouter = new BookingsRouter(options.routePrefix, {
+            controller: this.controllers.bookingsController
+        });
+
+        this.routers.MainRouter.navigate(options.route || "home", {trigger: true});
         Backbone.Wreqr.radio.channel("active").vent.trigger("application:started", this);
     });
     

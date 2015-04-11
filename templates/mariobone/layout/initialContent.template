@@ -2,6 +2,11 @@
     <li id="user-panel" class="user-panel area">
       <h2>User panel </h2>
     </li>
-    <li id="main-content" class="main-content area">
+    <li id="left-panel" class="left-panel area">
+        <h1> Side Menu </h1>
     </li>
+    <li id="workspace-panel" class="workspace-panel area">
+        Workspace Panel
+    </li>
+
 </ul>

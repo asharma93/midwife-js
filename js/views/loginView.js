@@ -21,28 +21,26 @@ define(function(require) {
         },
         authenticate: function(event) {
             event.preventDefault();
-            var url = "http://10.0.0.102:8080/api/login";
+            var url = "http://10.0.0.100:8080/api/login";
             var formValues = {
                 "username": this.ui.user.val(),
                 "password": this.ui.password.val()
             };
             console.log("That data: " + formValues);
-            $.ajax({
-                url: url,
-                type: "POST",
-                contentType: "application/json",
-                crossDomain: true,
-                data: JSON.stringify(formValues),
-                success: function(data) {
-                    console.log(["Login request details: ", data]);
-
-                    if (data.error) {  // If there is an error, show the error messages
-                        $(".alert-error").text(data.error.text).show();
-                    } else { // If not, send them back to the home page
-                        window.location.replace("");
-                    }
-                }
-            });
+            //$.ajax({
+            //    url: url,
+            //    type: "POST",
+            //    contentType: "application/json",
+            //    crossDomain: true,
+            //    data: JSON.stringify(formValues),
+            //    success: function(data) {
+            //        console.log(["Login request details: ", data]);
+            //
+            //        if (data.error) {  // If there is an error, show the error messages
+            //            $(".alert-error").text(data.error.text).show();
+            //        }
+            //    }
+            //});
         }
     });
 });
