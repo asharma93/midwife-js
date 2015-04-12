@@ -99,7 +99,7 @@ define(function(require) {
         this.routers.bookingsRouter = new BookingsRouter(options.routePrefix, {
             controller: this.controllers.bookingsController
         });
-
+        window.routers = this.routers;
         this.routers.MainRouter.navigate(options.route || "home", {trigger: true});
         Backbone.Wreqr.radio.channel("active").vent.trigger("application:started", this);
     });

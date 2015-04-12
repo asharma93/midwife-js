@@ -1,6 +1,8 @@
 <ul class="main-panel">
     <li id="user-panel" class="user-panel area">
-      <h2>User panel </h2>
+      <form class="login-button-container">
+          <input id="login-button" href="/login" value="Log in">
+      </form>
     </li>
     <li id="left-panel" class="left-panel area">
         <h1> Side Menu </h1>

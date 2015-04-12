@@ -10,8 +10,8 @@ define(function(require) {
         template = require("hbs!templates/mariobone/layout/mainContent");
 
     return Backbone.Marionette.LayoutView.extend({
-        className: "main-layout-panel",
-        tagName: "ul",
+        className: "workspace-container",
+        tagName: "div",
         template : template,
 
         initialize : function() {

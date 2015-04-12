@@ -85,3 +85,25 @@
 #login-container > p span {
   padding-left: 5px;
 }
+
+.login-panel {
+   width: 100%;
+}
+#login-button {
+  height: 28px;
+  width: 80px !important;
+  float: right;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #ea4c88;
+  color: #eee;
+  font-weight: bold;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+}
+.login-button-container {
+  float: right;
+  margin-right: 100px;
+
+}

@@ -1,0 +1,24 @@
+<nav class="side-menu">
+    <ul>
+        <li class="side-menu-item">
+            <a class="pull-right fa fa-home fa-2x" href="/home">
+                <p> Home </p>
+            </a>
+        </li>
+        <li class="side-menu-item">
+            <a class="pull-right fa fa-bullseye fa-2x" href="#">
+                <p> Bookings </p>
+            </a>
+        </li>
+        <li class="side-menu-item">
+            <a class="pull-right fa fa-desktop fa-2x" href="#">
+                <p> Information </p>
+            </a>
+        </li>
+        <li class="side-menu-item">
+            <a class="pull-right fa fa-desktop fa-2x" href="#">
+                <p> About </p>
+            </a>
+        </li>
+    </ul>
+</nav>

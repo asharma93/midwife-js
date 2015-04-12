@@ -6,7 +6,8 @@
 define(function(require) {
     var BaseController = require("controllers/baseController"),
         utils = require("objects/eventUtilities"),
-        LoginView = require("views/loginView");
+        LoginView = require("views/loginView"),
+        SideMenu = require("views/sideMenu");
 
     function getRegion(name) {
         return utils.request("getAppRegion", name);
@@ -21,8 +22,10 @@ define(function(require) {
         onLogin : function() {
             //Login logic goes here
             this.workspaceRegion = getRegion("workspaceRegion");
+            this.leftPanelRegion = getRegion("leftPanelRegion");
             // Show the main layout (wrap this in renderDefault?)
             this.workspaceRegion.show(new LoginView());
+            this.leftPanelRegion.show(new SideMenu());
         }
     });
 });

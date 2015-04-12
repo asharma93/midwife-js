@@ -19,11 +19,15 @@ require.config({
         "moment"                : VENDOR_PATH + "moment/min/moment.min",
         "underscore"            : VENDOR_PATH + "lodash/dist/lodash.underscore.min",
         "highcharts"            : VENDOR_PATH + "highstock-release/highstock",
+        "fullcalendar"          : VENDOR_PATH + "fullcalendar/dist/fullcalendar",
         "templates"             : "../templates"
     },
 
     shim: {
         "bootstrap" : ["jquery"],
+        "fullcalendar":{
+            deps: ["jquery"]
+        },
         "highcharts" : {
             deps : ["jquery"],
             exports: "Highcharts"

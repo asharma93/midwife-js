@@ -200,6 +200,7 @@
                             "moment"                : "empty:",
                             "underscore"            : "empty:",
                             "highcharts"            : "empty:",
+                            "fullcalendar"          : "empty:",
                             "templates"             : "../templates",
                             "locales"               : "../locales"
                         },
@@ -210,6 +211,9 @@
 
                         shim: {
                             "bootstrap" : ["jquery"],
+                            "fullcalendar": {
+                                deps: ["jquery"]
+                            },
                             "highcharts" : {
                                 deps : ["jquery"],
                                 exports: "Highcharts"
@@ -232,7 +236,8 @@
                         outputStyle: "compressed"
                     },
                     files: {
-                        "<%= PATHS.BUILD %>css/<%= pkg.name %>.min.css" : "css/main.scss"
+                        "<%= PATHS.BUILD %>css/<%= pkg.name %>.min.css" : "css/main.scss",
+                        "<%= PATHS.BUILD %>css/fullcalendar.min.css" : "bower_components/fullcalendar/dist/fullcalendar.min.css"
                     }
                 }
             },

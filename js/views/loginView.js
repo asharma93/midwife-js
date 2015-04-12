@@ -7,6 +7,7 @@ define(function(require) {
         /* jshint unused:false */
         $ = Backbone.$,
         Marionette = require("marionette"),
+        //Model = require("models/exampleModel"),
         template = require("hbs!templates/mariobone/login/login");
 
     return Backbone.Marionette.ItemView.extend({
@@ -26,21 +27,22 @@ define(function(require) {
                 "username": this.ui.user.val(),
                 "password": this.ui.password.val()
             };
-            console.log("That data: " + formValues);
-            //$.ajax({
-            //    url: url,
-            //    type: "POST",
-            //    contentType: "application/json",
-            //    crossDomain: true,
-            //    data: JSON.stringify(formValues),
-            //    success: function(data) {
-            //        console.log(["Login request details: ", data]);
-            //
-            //        if (data.error) {  // If there is an error, show the error messages
-            //            $(".alert-error").text(data.error.text).show();
-            //        }
-            //    }
-            //});
+            var self = this;
+            $.ajax({
+                url: url,
+                type: "POST",
+                contentType: "application/json",
+                crossDomain: true,
+                data: JSON.stringify(formValues),
+                success: function(data) {
+                    console.log(["Login request details: ", data]);
+                    self.data = data;
+                    if (data.error) {  // If there is an error, show the error messages
+                        $(".alert-error").text(data.error.text).show();
+                    }
+                }
+            });
+            window.routers.bookingsRouter.navigate("bookings", {trigger: true});
         }
     });
 });
