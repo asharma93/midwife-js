@@ -34,20 +34,6 @@ define(function(require) {
             }, this));
         },
         bindChannelEvents: function() {
-            //  If the controller defines a channelEvent hash we use it to bind to
-            //  channel events.  The channelEvent hash will look something like this -
-            //
-            //    channelEvents: {
-            //        "kpi:selected": "kpiSelected",
-            //        "kpi:unselected": "kpiUnselected"
-            //    }
-            //
-            //  Here we're binding "kpi:selected" to the "kpiSelected" method that must
-            //  exist on the object.  We also bind "kpi:unselected" to the "kpiUnselected"
-            //  method and again it must exist on the object.
-            //
-            //  These method will be bound to the controller object, so 'this' will point to
-            //  the controller object the method is defined on - theres no need to use _.bind
             if (this.channelEvents) {
                 var self = this,
                     channelEvents = this.channelEvents,
